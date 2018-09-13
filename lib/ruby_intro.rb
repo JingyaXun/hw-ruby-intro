@@ -1,5 +1,5 @@
 # When done, submit this entire file to the autograder.
-# This File is Written by Jingya Xun and Teddy Hung
+# This File is written by Jingya Xun
 # Part 1
 
 def sum arr
