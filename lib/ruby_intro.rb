@@ -1,5 +1,5 @@
 # When done, submit this entire file to the autograder.
-
+# This File is Written by Jingya Xun and Teddy Hung
 # Part 1
 
 def sum arr
@@ -91,10 +91,19 @@ end
 
 class BookInStock
 # YOUR CODE HERE
-    def initialize (isbn = "", price=0.0)
+    def initialize (isbn, price)
+        if isbn.length == 0 || price <= 0
+            raise ArgumentError.new("Invalid isbn or price input.")
+        end 
         @isbn = isbn
         @price = price
     end
     
+    attr_reader :isbn, :price # create getter methods
+    attr_writer :isbn, :price # create setter methods
     
+    def price_as_string
+        formattedPrice = "$"+ ('%.2f' % @price).to_s
+        return formattedPrice
+    end
 end
